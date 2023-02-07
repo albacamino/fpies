@@ -11,10 +11,10 @@ def convert_dict(data_list):
     return res
 
 
-headers = "CHR \t POS \t ID \t REF \t ALT \t QUAL \t Filter \t AnnoType \t Consequence \t GeneName \t PHRED"
+headers = "CHR \t POS \t ID \t REF \t ALT \t QUAL \t Filter \t AnnoType \t Consequence \t GeneName \t PHRED\n"
 
 with open("total_fpies_annot.txt", "r") as file, open("fpies_annot.txt", "w") as f_out:
-    f_out.write(headers + "\n")
+    f_out.write(headers)
     
     for line in file:
         if not line.startswith("#"):
