@@ -17,7 +17,7 @@ with open("total_fpies_annot.txt", "r") as file, open("fpies_annot.txt", "w") as
     f_out.write(headers)
     
     for line in file:
-        if not line.startswith("#"):
+        if not line.startswith("#"):  # Avoid comment lines
 
             line_split = line.split("\t")
             fields = "\t".join(line_split[:7])
