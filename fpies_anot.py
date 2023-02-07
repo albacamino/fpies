@@ -15,6 +15,8 @@ headers = "CHR \t POS \t ID \t REF \t ALT \t QUAL \t Filter \t AnnoType \t Conse
 
 with open("total_fpies_annot.txt", "r") as file, open("fpies_annot.txt", "w") as f_out:
     f_out.write(headers)
+
+    print("Starting code...")
     
     for line in file:
         if not line.startswith("#"):
