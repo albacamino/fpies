@@ -19,7 +19,7 @@ with open("total_fpies_annot.txt", "r") as file, open("fpies_annot.txt", "w") as
     print("Starting code...")
     
     for line in file:
-        if not line.startswith("#"):  # Avoid comment lines
+        if not line.startswith("#"):  # Better comment!
 
             line_split = line.split("\t")
             fields = "\t".join(line_split[:7])
