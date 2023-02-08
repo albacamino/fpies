@@ -1,9 +1,11 @@
-import os 
+import os
+
+import config
 
 list_dir = os.listdir("path/to/dir")
 list_fpies = os.listdir("path/to/dir")
 
-comando  = "gatk CombineGVCFs -R /home/common/references/hg38/Homo_sapiens_assembly38.fasta -D /home/common/references/hg38/Homo_sapiens_assembly38.dbsnp138.vcf.gz "
+comando = f"gatk CombineGVCFs -R {config.homo_sapiens} -D {config.db_snp}"
 
 tail = "-O output.vcf.gz"
 
@@ -19,4 +21,3 @@ for file in list_fpies:
         comando = comando + flag
 comando = comando + tail
 print(comando)
-
